@@ -6,8 +6,8 @@ class UserStateMachine < ActiveRecord::Migration
   end
   
   def self.up
-    User.update_all("user_state", "active")
     add_column :users, :user_state, :string, :null => false, :precision => 50
+    User.update_all(:user_state => "active")
   end
 
   def self.down

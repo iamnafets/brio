@@ -12,7 +12,6 @@ class AddAdditionalColumnsToEvents < ActiveRecord::Migration
     add_column(:events, :parent_id, :integer)
     add_column(:events, :minimum_age_to_register, :integer)
     add_column(:events, :minimum_age_to_participate, :integer)
-    add_column(:events, :time_zone, :string, :limit => 40, :null => false)
     add_column(:events, :latitude, :string, :limit => 40)
     add_column(:events, :longitude, :string, :limit => 40)
   end
